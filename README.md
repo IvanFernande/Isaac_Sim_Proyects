@@ -41,6 +41,7 @@ Although Isaac Sim comes with built-in consoles for executing code, I prefer to 
 3. Search for **VS Code Integration** and enable it.
 
 ### Step 3: Start Working
+![image](https://github.com/user-attachments/assets/4d7e06d0-c9c2-42ce-8509-2416fc752b1e)
 Once both the VS Code extension and Isaac Sim integration are installed and enabled, you can:
 - Write, debug, and execute scripts directly from VSCode.
 - Seamlessly connect VSCode to your running Isaac Sim instance.
