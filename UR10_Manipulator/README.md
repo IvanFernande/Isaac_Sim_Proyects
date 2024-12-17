@@ -27,8 +27,8 @@ Isaac Sim enables developers to experiment with the UR10's kinematics, trajector
    - Real-time feedback of joint states.
 - **Script**: `ui.py`
 - **Usage**:
-   - Launch Isaac Sim and load the `ur10_bin_stacking_long_conveyor` model or the scene on `joint_controllers_ui/enviroment/scene.usd`.
-   - Run the on `joint_controllers_ui/scripts/ui.py` with the Isaac Sim extension
+   - Launch Isaac Sim and load the `ur10_bin_stacking_long_conveyor` model or the scene on `joint_controller_ui/enviroment/scene.usd`.
+   - Run the on `joint_controller_ui/scripts/ui.py` with the Isaac Sim extension
    - Use the UI window to interact with the robot:
      - Move joints to predefined positions with buttons.
      - Adjust individual joints using sliders and apply the changes in real time.
@@ -45,7 +45,7 @@ Isaac Sim enables developers to experiment with the UR10's kinematics, trajector
 2. **Steps**:
    - Clone this repository:
    - Open **Isaac Sim** and **Visual Studio Code**.
-   - Ensure the `ur10_bin_stacking_long_conveyor` model is loaded in Isaac Sim or open the scene on `joint_controllers_ui/enviroment/scene.usd`.
+   - Ensure the `ur10_bin_stacking_long_conveyor` model is loaded in Isaac Sim or open the scene on `joint_controller_ui/enviroment/scene.usd`.
    - Run the script using the Isaac Sim extension:
 
 3. **Using the UI**:
