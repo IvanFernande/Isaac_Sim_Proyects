@@ -28,88 +28,21 @@ Thanks to **NVIDIA Omniverse**, Isaac Sim integrates tools like USD (Universal S
 
 ## My Development Environment
 
-For efficient script development in **Isaac Sim**, I use **Visual Studio Code (VSCode)**, leveraging a combination of tools and extensions for a seamless experience.
+Although Isaac Sim comes with built-in consoles for executing code, I prefer to work directly in **Visual Studio Code (VSCode)** for a more flexible and efficient workflow. Here is how you can set up the environment to work with Isaac Sim in VSCode:
 
-### VSCode Extensions
-1. **Python** - For Python development and debugging.
-2. **Omniverse Code Extension** - Official NVIDIA extension for integration with Omniverse applications like Isaac Sim.
-3. **Jupyter** - Allows interactive execution and debugging of Python code.
+### Step 1: Install the Isaac Sim VSCode Extension
+1. Open **Visual Studio Code**.
+2. Go to the **Extensions** panel.
+3. Search for and install the **Isaac Sim VS Code** extension.
 
-### Isaac Sim Configuration
-- **Omniverse Kit** - A modular development environment that supports Python scripting and USD workflows.
-- **Dynamic Control API** - Provides real-time control over robot articulations, joints, and sensors.
-- **ROS2 Integration** - I have implemented connections with **ROS2** to simulate real-world communication between robots and controllers, enabling advanced robotics workflows.
+### Step 2: Enable VS Code Integration in Isaac Sim
+1. Open **Isaac Sim**.
+2. Go to **Window** -> **Extensions**.
+3. Search for **VS Code Integration** and enable it.
 
-Using **VSCode** with the appropriate extensions allows me to:
-- Write, debug, and execute scripts efficiently.
-- Integrate Isaac Sim simulations with ROS2 frameworks for complex robotic tasks.
-- Test AI-driven control systems and reinforcement learning pipelines directly within the Isaac Sim environment.
+### Step 3: Start Working
+Once both the VS Code extension and Isaac Sim integration are installed and enabled, you can:
+- Write, debug, and execute scripts directly from VSCode.
+- Seamlessly connect VSCode to your running Isaac Sim instance.
 
----
-
-## Repository Overview
-
-This repository includes example scripts and projects for:
-
-- Controlling robots like the **UR10_bin_stacking_long_conveyor** model.
-- Manipulating robot articulations using the **Dynamic Control API**.
-- Building interactive interfaces with **omni.ui** for real-time control.
-- Integrating **ROS2** for real-world communication between Isaac Sim and robotic controllers.
-
-### How to Run a Script:
-1. Clone this repository into your local environment:
-   ```bash
-   git clone https://github.com/your-username/isaac-sim-scripts.git
-   cd isaac-sim-scripts
-   ```
-2. Open **Isaac Sim** and Visual Studio Code.
-3. Ensure all required extensions are installed.
-4. Run the script directly from **VSCode**:
-   - Use the integrated terminal or the Jupyter interface for interactive execution.
-
----
-
-## Example Script: UR10 Joint Control
-Below is a simple script for controlling the joints of the UR10 robot using Isaac Sim's **Dynamic Control API**:
-
-```python
-from omni.isaac.dynamic_control import _dynamic_control
-
-# Initialize the dynamic control interface
-robot_path = "/World/ur10_bin_stacking_long_conveyor/ur10"
-dc = _dynamic_control.acquire_dynamic_control_interface()
-articulation = dc.get_articulation(robot_path)
-
-# Move the joints to predefined positions
-if articulation:
-    dc.wake_up_articulation(articulation)
-    target_positions = [0.0, -1.0, 0.1, -0.1, 0.1, -0.1]  # Example positions
-    dc.set_articulation_dof_position_targets(articulation, target_positions)
-    print("Joints moved to target positions.")
-else:
-    print("Robot not found in the specified path.")
-```
-
----
-
-## Requirements
-- **NVIDIA Isaac Sim** (compatible version).
-- **Python 3.7+**.
-- **Visual Studio Code** with:
-   - Python extension.
-   - Omniverse extension.
-
----
-
-## Next Steps
-- **Advanced ROS2 Integration**: Simulate ROS2 control nodes and controllers.
-- **Reinforcement Learning (RL)**: Train AI models to automate complex tasks like pick-and-place operations.
-- **Trajectory Automation**: Develop scripts to generate smooth and collision-free robot trajectories.
-- **Sensor Integration**: Implement additional sensors such as cameras, LiDAR, and IMUs for perception tasks.
-
----
-
-If you have any questions, suggestions, or feedback, feel free to reach out! 🚀
-
-#Robotics #IsaacSim #ROS2 #VSCode #Omniverse #Simulation #ReinforcementLearning
-
+This setup provides a smoother workflow, making it easier to develop, test, and iterate on your robotic simulations and scripts.
